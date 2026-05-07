@@ -1,4 +1,5 @@
-!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -401,7 +402,7 @@ window.saveToFirebase = async function(data) {
 // ================================================================
 // STEP 2 — GEMINI API KEY (free from aistudio.google.com)
 // ================================================================
-const GEMINI_KEY = "YOUR_GEMINI_API_KEY_HERE";
+const GEMINI_KEY = "AIzaSyAZc62vjdQQ73mqHfqfmLMWPyxl9iy6Wuk";
 
 const RESTAURANT_INFO = `You are a friendly, helpful assistant for Himalayan Kitchen restaurant in Kathmandu, Nepal.
 
@@ -546,7 +547,8 @@ async function sendChat() {
         })
       }
     );
-    const data  = await res.json();
+   const data = await res.json();
+console.log('Gemini response:', JSON.stringify(data));
 
     if (data.error) {
       console.error('Gemini error:', data.error);
